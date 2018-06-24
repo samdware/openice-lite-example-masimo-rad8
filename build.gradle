@@ -1,0 +1,33 @@
+/**
+ * @author Hung Nguyen (hungng@seas.upenn.edu)
+ */
+
+apply plugin: 'java'
+apply plugin: 'application'
+
+group 'edu.upenn.cis.precise.openicelite.example'
+
+wrapper {
+    gradleVersion = '4.8'
+}
+
+defaultTasks 'build'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+mainClassName = "edu.upenn.cis.precise.openicelite.example"
+
+repositories {
+    flatDir {
+        dirs 'libs'
+    }
+
+    jcenter()
+
+    maven { url "https://jitpack.io" }
+}
+
+dependencies {
+    // OpenICE-lite Core
+    implementation 'com.github.samdware:openice-lite:v0.1.4'
+}
