@@ -15,7 +15,7 @@ defaultTasks 'build'
 
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
-mainClassName = "edu.upenn.cis.precise.openicelite.example"
+mainClassName = "edu.upenn.cis.precise.openicelite.example.masimo.MasimoRad8"
 
 repositories {
     flatDir {
@@ -30,4 +30,7 @@ repositories {
 dependencies {
     // OpenICE-lite Core
     implementation 'com.github.samdware:openice-lite:v0.1.4'
+
+    // OpenICE-lite Masimo Rad-8 Driver
+    implementation 'com.github.samdware:openice-lite-iomt-masimo-rad8:v0.1.4'    
 }
